@@ -1,0 +1,52 @@
+Currency Exchange Service:
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+sample response:
+	{
+		"id":10001,
+		"from":"USD",
+		"to":"INR",
+		"conversionMultiple":65.00,
+		"environment":"8000 instance-id "
+	}
+
+----------------------------------------------------------------------------------------
+URLS:
+Currency exchange:
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Currency Conversion:
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+Eureka:
+http://localhost:8761
+
+Api gateway:
+http://localhost:8765
+
+
+
+----------------------------------------------------------------------------------------
+We will be using following ports for running our microservices and components.
+
+1. Limits Microservice
+	Ports: 8080, 8081, etc.
+
+2. Spring Cloud Config Server
+	Port: 8888
+
+3. Currency Exchange Microservice
+	Ports: 8000, 8001, 8002, etc.
+
+4. Currency Conversion Microservice
+	Ports: 8100, 8101, 8102, etc.
+
+5. Netflix Eureka Naming Server : http://localhost:8761
+	Port: 8761
+
+6. API Gateway
+	Port: 8765
+
+7. Zipkin Distributed Tracing Server
+	Port: 9411
